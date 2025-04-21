@@ -29,7 +29,7 @@ jobs:
       # Verificar erros semanticos (analysis_options.yaml)
       - name: Analyse project source
         run: flutter analyse
-        # utilizar --fatal-warnings para parar execução se encontrar qualquer problema 
+        # utilizar --fatal-warnings para parar execução se encontrar qualquer problema
       # Rodar testes unitários
       - name: Run tests
         run: flutter test
