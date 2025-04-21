@@ -14,7 +14,7 @@ class InsertData extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Personal Information"),
+        title: const Text('Personal Information'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -27,13 +27,13 @@ class InsertData extends StatelessWidget {
                 keyboardType: TextInputType.number,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return "Please, enter the weight!";
+                    return 'Please, enter the weight!';
                   }
 
                   return null;
                 },
                 decoration: const InputDecoration(
-                    labelText: "Weight", border: OutlineInputBorder()),
+                    labelText: 'Weight', border: OutlineInputBorder()),
               ),
               const SizedBox(
                 height: 6,
@@ -43,13 +43,13 @@ class InsertData extends StatelessWidget {
                 keyboardType: TextInputType.number,
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return "Please, enter the height!";
+                    return 'Please, enter the height!';
                   }
 
                   return null;
                 },
                 decoration: const InputDecoration(
-                  labelText: "Height", border: OutlineInputBorder()),
+                  labelText: 'Height', border: OutlineInputBorder()),
               ),
               const SizedBox(
                 height: 24,
@@ -65,7 +65,7 @@ class InsertData extends StatelessWidget {
                     Navigator.pushNamed(context, '/result');
                   }
                 },
-                child: const Text("Calculate")
+                child: const Text('Calculate')
               )
             ],
           ),

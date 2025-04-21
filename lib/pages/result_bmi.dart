@@ -9,13 +9,13 @@ class ResultBMI extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Result BMI Calculator"),
+        title: const Text('Result BMI Calculator'),
         centerTitle: true,
       ),
       body: Center(
         child: Column(
           children: [
-            const Text("Your BMI result is:"),
+            const Text('Your BMI result is:'),
             Text(
               Provider.of<BMIController>(context, listen: false).bmi
             ),
