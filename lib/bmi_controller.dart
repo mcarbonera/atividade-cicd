@@ -21,5 +21,5 @@ class BMIController extends ChangeNotifier {
     }
 
     notifyListeners();
- }
+  }
 }

@@ -4,5 +4,5 @@ final List results = [
   'NORMAL',
   'OVERWEIGHT',
   'OBESE',
-  'VERY OBESE'
+  'VERY OBESE',
 ];

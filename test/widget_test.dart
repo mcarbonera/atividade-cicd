@@ -18,7 +18,7 @@ void main() {
       ChangeNotifierProvider(
         create: (context) => BMIController(),
         child: const MyApp(),
-      )
+      ),
     );
 
     expect(find.text('Please, enter the weight!'), findsNothing);

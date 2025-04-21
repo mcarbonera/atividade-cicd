@@ -5,10 +5,12 @@ import 'package:imc_utfpr_t2/pages/result_bmi.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-    create: (context) => BMIController(),
-    child: const MyApp(),
-  ));
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => BMIController(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => InsertData(),
-        '/result': (context) => const ResultBMI()
+        '/result': (context) => const ResultBMI(),
       },
     );
   }
