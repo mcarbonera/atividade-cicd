@@ -28,7 +28,7 @@ jobs:
         # --output=none informa os arquivos que precisam ser formatados
       # Verificar erros semanticos (analysis_options.yaml)
       - name: Analyse project source
-        run: flutter analyse
+        run: flutter analyze
         # utilizar --fatal-warnings para parar execução se encontrar qualquer problema
       # Rodar testes unitários
       - name: Run tests
