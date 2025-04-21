@@ -1,0 +1,38 @@
+name: Flutter
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  flutter_job:
+    # Maquina, macos para build no ios.
+    runs-on: macos-latest
+    steps:
+      # Clonar o projeto na maquina
+      - uses: actions/checkout@v4
+      # Instala o Flutter e dependências
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+      # Buscar dependências do projeto
+      - name: Install dependencies
+        run: flutter pub get
+      # Verificar formatação código dart (forçar padronização)
+      - name: Verify formatting
+        run: dart format --output=none --set-exit-if-changed .
+        # --set-exit-if-changed para a execução se o código não estiver bem formatado
+        # --output=none informa os arquivos que precisam ser formatados
+      # Verificar erros semanticos (analysis_options.yaml)
+      - name: Analyse project source
+        run: flutter analyse
+        # utilizar --fatal-warnings para parar execução se encontrar qualquer problema 
+      # Rodar testes unitários
+      - name: Run tests
+        run: flutter test
+      # Criar o APK android
+      - name: Build appbundle
+        run: flutter build appbundle
